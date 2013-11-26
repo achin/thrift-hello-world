@@ -10,13 +10,13 @@
   (echo [msg]
     msg))
 
-(defn -main [& [port]]
-  (if port
+(defn -main [& [host port]]
+  (if (and host port)
     (let [port (Integer/parseInt port)]
-      (println "Listening on port" port)
+      (println "Listening on host" host "and port" port)
       (thrift/serve-and-block!
         (thrift/single-threaded-server
           echo-service port
-          :bind "0.0.0.0"
+          :bind host
           :protocol :compact)))
-    (println "You must specify a port to bind to!") ))
+    (println "You must specify a host and port to bind to!") ))

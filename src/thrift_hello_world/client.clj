@@ -1,6 +1,5 @@
 (ns thrift-hello-world.client
-  (:require [thrift-clj.core :as thrift])
-  (:gen-class))
+  (:require [thrift-clj.core :as thrift]))
 
 (thrift/import
   (:clients echo.EchoService))

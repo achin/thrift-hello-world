@@ -21,23 +21,22 @@ $ lein run -m thrift-hello-world.client localhost 7007 hello
 ```
 
 ### Java
-Compile the client and server. Then build an uberjar.
+Build an uberjar.
 
 ```
-$ lein compile
 $ lein uberjar
 ```
 
 Launch the server.
 
 ```
-$ java -cp target/thrift-hello-world-0.1.0-SNAPSHOT-standalone.jar thrift_hello_world.server 7007
+$ java -cp target/thrift-hello-world-0.1.0-SNAPSHOT-standalone.jar clojure.main -m thrift-hello-world.server localhost 7000
 ```
 
 Run the client.
 
 ```
-$ java -cp target/thrift-hello-world-0.1.0-SNAPSHOT-standalone.jar thrift_hello_world.client localhost 7007 hello
+$ ava -cp target/thrift-hello-world-0.1.0-SNAPSHOT-standalone.jar clojure.main -m thrift-hello-world.client localhost 7000 hello
 -> hello
 ```
 

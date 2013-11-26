@@ -1,5 +1,6 @@
 (defproject thrift-hello-world "0.1.0-SNAPSHOT"
   :description "Simple hello world Thrift client and server"
+  :url "https://github.com/achin/thrift-hello-world"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.5.1"]
